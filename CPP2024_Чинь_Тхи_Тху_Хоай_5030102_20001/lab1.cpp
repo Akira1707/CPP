@@ -3,7 +3,6 @@
 #include <vector>
 
 using namespace std;
-
 void SolveEquation2(double a, double b, double c, vector<double>& root) {
     double delta, x1, x2;
     root.clear();
@@ -32,7 +31,7 @@ void SolveEquation2(double a, double b, double c, vector<double>& root) {
     }
 }
 
-int main() {
+/*int main() {
     double a, b, c;
     vector<double> root;
 
@@ -52,5 +51,5 @@ int main() {
     }
 
     return 0;
-}
+}*/
 
