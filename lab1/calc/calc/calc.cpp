@@ -161,7 +161,6 @@ int main() {
     getline(cin, expression);
 
     string postfix = infixToPostfix(expression);
-    cout << "Postfix expression: " << postfix << endl;
 
     double result = evaluatePostfix(postfix);
     cout << "Result: " << result << endl;
