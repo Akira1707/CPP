@@ -1,4 +1,0 @@
-D:/3 курсе/CPP/lab1/build/CMakeFiles/lab1.dir
-D:/3 курсе/CPP/lab1/build/CMakeFiles/main.dir
-D:/3 курсе/CPP/lab1/build/CMakeFiles/ALL_BUILD.dir
-D:/3 курсе/CPP/lab1/build/CMakeFiles/ZERO_CHECK.dir

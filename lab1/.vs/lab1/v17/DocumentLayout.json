@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\3 \u043A\u0443\u0440\u0441\u0435\\CPP\\lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D7C055D-52BE-4E49-A235-D33D49786A14}|lab1\\lab1.vcxproj|D:\\3 \u043A\u0443\u0440\u0441\u0435\\CPP\\lab1\\lab1\\calc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1D7C055D-52BE-4E49-A235-D33D49786A14}|lab1\\lab1.vcxproj|solutionrelative:lab1\\calc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "calc.cpp",
+              "DocumentMoniker": "D:\\3 \u043A\u0443\u0440\u0441\u0435\\CPP\\lab1\\lab1\\calc.cpp",
+              "RelativeDocumentMoniker": "lab1\\calc.cpp",
+              "ToolTip": "D:\\3 \u043A\u0443\u0440\u0441\u0435\\CPP\\lab1\\lab1\\calc.cpp",
+              "RelativeToolTip": "lab1\\calc.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-11T17:19:17.657Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
