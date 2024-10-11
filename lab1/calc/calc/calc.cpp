@@ -19,13 +19,13 @@ HMODULE loadMathLibrary(const string& libraryName) {
 }
 
 bool isOperator(char c) {
-    return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+    return c == '+' || c == '-' || c == '*' || c == '/' || c == '^' ;
 }
 
 int priority(char op) {
-    if (op == '^') return 3;
     if (op == '*' || op == '/') return 2;
     if (op == '+' || op == '-') return 1;
+    if (isalpha(op)) return 3;
     return 0;
 }
 
@@ -34,7 +34,7 @@ bool higherPriority(char a, char b) {
 }
 
 string infixToPostfix(const string& expression) {
-    stack<char> s;
+    stack<string> s;
     string postfix = "";
     string number = "";
     string function = "";
@@ -46,6 +46,13 @@ string infixToPostfix(const string& expression) {
             number += c;
             if (!function.empty()) {
                 check = 1;
+                while (!s.empty() && isOperator(s.top()[0]) && higherPriority(s.top()[0], 'a')) {
+                    postfix += s.top();
+                    postfix += ' ';
+                    s.pop();
+                }
+                s.push(function);
+                function = "";
             }
         }
         else {
@@ -59,18 +66,25 @@ string infixToPostfix(const string& expression) {
             else {
                 if (!function.empty()) {
                     check = 1;
+                    while (!s.empty() && isOperator(s.top()[0]) && higherPriority(s.top()[0], 'a')) {
+                        postfix += s.top();
+                        postfix += ' ';
+                        s.pop();
+                    }
+                    s.push(function);
+                    function = "";
                 }
                 if (c == '(' && check != 1) {
-                    s.push(c);
+                    string l = "";
+                    l += c;
+                    s.push(l);
                 }
                 else if (c == ')') {
-                    if (check == 1) {
-                        postfix += function + ' ';
-                        function = "";
+                    if (check == 1) {       
                         check = 0;
                         continue;
                     }
-                    while (!s.empty() && s.top() != '(') {
+                    while (!s.empty() && s.top()[0] != '(') {
                         postfix += s.top();
                         postfix += ' ';
                         s.pop();
@@ -78,13 +92,15 @@ string infixToPostfix(const string& expression) {
                     s.pop();
                 }
                 else if (isOperator(c)) {
-                    while (!s.empty() && isOperator(s.top()) && higherPriority(s.top(), c)) {
+                    while (!s.empty() && isOperator(s.top()[0]) && higherPriority(s.top()[0], c)) {
                         postfix += s.top();
                         postfix += ' ';
                         s.pop();
                     }
-                    s.push(c);
-                }
+
+                    string l = "";
+                    l += c;
+                    s.push(l);                 }
             }
         }
     }
@@ -144,14 +160,12 @@ double evaluatePostfix(const string& postfix) {
             case '-': result = a - b; break;
             case '*': result = a * b; break;
             case '/': result = a / b; break;
-            case '^': result = pow(a, b); break;
             default: result = 0;
             }
 
             s.push(result);
         }
     }
-
     return s.top();
 }
 
